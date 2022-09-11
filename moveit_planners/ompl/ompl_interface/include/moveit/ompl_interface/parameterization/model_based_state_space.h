@@ -36,7 +36,8 @@
 
 #pragma once
 
-#include <ompl/base/StateSpace.h>
+#include <ompl/base/spaces/RealVectorStateSpace.h>
+#include <ompl/base/StateSpaceTypes.h>
 #include <moveit/robot_model/robot_model.h>
 #include <moveit/robot_state/robot_state.h>
 #include <moveit/kinematic_constraints/kinematic_constraint.h>
@@ -71,7 +72,7 @@ struct ModelBasedStateSpaceSpecification
 
 OMPL_CLASS_FORWARD(ModelBasedStateSpace);
 
-class ModelBasedStateSpace : public ompl::base::StateSpace
+class ModelBasedStateSpace : public ompl::base::RealVectorStateSpace
 {
 public:
   class StateType : public ompl::base::State
